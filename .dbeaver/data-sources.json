@@ -1,0 +1,41 @@
+{
+	"folders": {},
+	"connections": {
+		"mariaDB-19a514c4bef-728d431c445f9f11": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "localhost",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "3310",
+				"url": "jdbc:mariadb://localhost:3310/",
+				"configurationType": "MANUAL",
+				"home": "/usr",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"provider-properties": {
+					"@dbeaver-show-all-dbs@": "true"
+				},
+				"auth-model": "native"
+			}
+		}
+	},
+	"virtual-models": {"mariaDB-19a514c4bef-728d431c445f9f11":{"cert-manager":{":activeEmployee":{"properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202511121915\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"mariaDB-19a514c4bef-728d431c445f9f11\"\u003e\u003centity id\u003d\"1\" name\u003d\"activeEmployee\" fq-name\u003d\"`cert-manager`.activeEmployee\" order\u003d\"0\" color-bg\u003d\"108,54,27\" border-width\u003d\"3\" font\u003d\"Segoe UI:9:0\" x\u003d\"284\" y\u003d\"177\"\u003e\u003cpath name\u003d\"cert-manager\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations/\u003e\u003c/diagram\u003e"}}},":certExpirate":{"properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202511121942\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"mariaDB-19a514c4bef-728d431c445f9f11\"\u003e\u003centity id\u003d\"1\" name\u003d\"certExpirate\" fq-name\u003d\"`cert-manager`.certExpirate\" order\u003d\"0\" color-bg\u003d\"108,54,27\" font\u003d\"Segoe UI:9:0\" x\u003d\"40\" y\u003d\"87\"\u003e\u003cpath name\u003d\"cert-manager\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"certNames\" fq-name\u003d\"`cert-manager`.certNames\" order\u003d\"1\" font\u003d\"Segoe UI:9:0\" x\u003d\"311\" y\u003d\"40\"\u003e\u003cpath name\u003d\"cert-manager\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"employee\" fq-name\u003d\"`cert-manager`.employee\" order\u003d\"2\" font\u003d\"Segoe UI:9:0\" x\u003d\"311\" y\u003d\"196\"\u003e\u003cpath name\u003d\"cert-manager\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations\u003e\u003crelation name\u003d\"certExpirate_certNames_FK\" fq-name\u003d\"`cert-manager`.certExpirate.certExpirate_certNames_FK\" type\u003d\"fk\" pk-ref\u003d\"2\" fk-ref\u003d\"1\"/\u003e\u003crelation name\u003d\"certExpirate_employee_FK\" fq-name\u003d\"`cert-manager`.certExpirate.certExpirate_employee_FK\" type\u003d\"fk\" pk-ref\u003d\"3\" fk-ref\u003d\"1\"/\u003e\u003c/relations\u003e\u003c/diagram\u003e"}}},":employee":{"properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202511121944\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"mariaDB-19a514c4bef-728d431c445f9f11\"\u003e\u003centity id\u003d\"1\" name\u003d\"employee\" fq-name\u003d\"`cert-manager`.employee\" order\u003d\"0\" color-bg\u003d\"108,54,27\" font\u003d\"Segoe UI:9:0\" x\u003d\"347\" y\u003d\"103\"\u003e\u003cpath name\u003d\"cert-manager\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"activeEmployee\" fq-name\u003d\"`cert-manager`.activeEmployee\" order\u003d\"1\" font\u003d\"Segoe UI:9:0\" x\u003d\"644\" y\u003d\"40\"\u003e\u003cpath name\u003d\"cert-manager\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"company\" fq-name\u003d\"`cert-manager`.company\" order\u003d\"2\" font\u003d\"Segoe UI:9:0\" x\u003d\"690\" y\u003d\"182\"\u003e\u003cpath name\u003d\"cert-manager\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"4\" name\u003d\"position\" fq-name\u003d\"`cert-manager`.`position`\" order\u003d\"3\" font\u003d\"Segoe UI:9:0\" x\u003d\"644\" y\u003d\"334\"\u003e\u003cpath name\u003d\"cert-manager\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"5\" name\u003d\"certExpirate\" fq-name\u003d\"`cert-manager`.certExpirate\" order\u003d\"4\" font\u003d\"Segoe UI:9:0\" x\u003d\"40\" y\u003d\"134\"\u003e\u003cpath name\u003d\"cert-manager\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations\u003e\u003crelation name\u003d\"certExpirate_employee_FK\" fq-name\u003d\"`cert-manager`.certExpirate.certExpirate_employee_FK\" type\u003d\"fk\" pk-ref\u003d\"1\" fk-ref\u003d\"5\"/\u003e\u003crelation name\u003d\"employee_activeEmployee_FK\" fq-name\u003d\"`cert-manager`.employee.employee_activeEmployee_FK\" type\u003d\"fk\" pk-ref\u003d\"2\" fk-ref\u003d\"1\"/\u003e\u003crelation name\u003d\"employee_company_FK\" fq-name\u003d\"`cert-manager`.employee.employee_company_FK\" type\u003d\"fk\" pk-ref\u003d\"3\" fk-ref\u003d\"1\"/\u003e\u003crelation name\u003d\"employee_position_FK\" fq-name\u003d\"`cert-manager`.employee.employee_position_FK\" type\u003d\"fk\" pk-ref\u003d\"4\" fk-ref\u003d\"1\"/\u003e\u003c/relations\u003e\u003c/diagram\u003e"}}}}}},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": true,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"auto-close-connections": true,
+			"close-connections-period": 14400
+		}
+	}
+}

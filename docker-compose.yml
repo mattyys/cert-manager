@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  cert-managerdb:
+    image: mariadb:latest
+    container_name: cert-managerdb
+    restart: unless-stopped
+
+    environment:
+      # Cambia la contraseña antes de levantar en un entorno real
+      MARIADB_USER: db
+      MARIADB_PASSWORD: db
+      MARIADB_ROOT_PASSWORD: dbpw
+      MARIADB_DATABASE: db
+
+    ports:
+      - "3310:3306" # host:container
+
+    volumes:
+      # Persistir datos en la carpeta del proyecto (ruta relativa al compose file)
+      - ../working-mariadb:/var/lib/mysql
+
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
